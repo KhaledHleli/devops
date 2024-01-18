@@ -2,9 +2,10 @@
 pipeline {
   agent none
   stages {
-    checkout scm
-  	stage('Maven Install') {
-    	agent {
+    stage('Maven Install') {
+		checkout scm
+  	
+	  agent {
       	docker {
         	image 'maven:3.5.0'
         }
