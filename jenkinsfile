@@ -1,8 +1,4 @@
 node {
     checkout scm
-    def testImage = docker.build("test-image")
-
-    testImage.inside {
-        sh 'echo Hello'
-    }
+    def testImage = docker.build("app:java")
 }
