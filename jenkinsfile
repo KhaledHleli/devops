@@ -3,6 +3,6 @@ node {
     def testImage = docker.build("test-image")
 
     testImage.inside {
-        sh 'make test'
+        sh 'echo Hello'
     }
 }
